@@ -37,3 +37,24 @@ When you create a read replica, you first specify an existing DB instance as the
     </details>
 
 ___
+
+
+   <details>
+    <summary>
+    ❓ A company's application is running on Amazon EC2 instances in a single Region. In the event of a disaster, a solutions architect needs to ensure that the resources can also be deployed to a second Region.
+Which combination of actions should the solutions architect take to accomplish this? (Choose two.) </summary>
+    </br></br>
+    <blockquote>  Launch a new EC2 instance from an Amazon Machine Image (AMI) in a new Region + Copy an Amazon Machine Image (AMI) of an EC2 instance and specify a different Region for the destination.
+   Amazon Machine Image (AMI) Copy. AMI Copy enables you to easily copy your Amazon Machine Images between AWS
+Regions. AMI Copy helps enable several key scenarios including:
+Simple and Consistent Multi-Region Deployment ג€" You can copy an AMI from one region to another, enabling you to easily launch consistent instances based on the same AMI into different regions.
+Scalability ג€" You can more easily design and build world-scale applications that meet the needs of your users, regardless of their location.
+Performance ג€" You can increase performance by distributing your application and locating critical components of your application in closer proximity to your users.
+You can also take advantage of region-specific features such as instance types or other AWS services.
+Even Higher Availability ג€" You can design and deploy applications across AWS regions, to increase availability.
+Once the new AMI is in an Available state the copy is complete.
+    </blockquote>
+    </br></br>
+    </details>
+
+___
