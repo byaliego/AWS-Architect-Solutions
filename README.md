@@ -42,7 +42,7 @@ ___
    <details>
     <summary>
     ❓ A company's application is running on Amazon EC2 instances in a single Region. In the event of a disaster, a solutions architect needs to ensure that the resources can also be deployed to a second Region.
-Which combination of actions should the solutions architect take to accomplish this? (Choose two.) </summary>
+Which combination of actions should the solutions architect take to accomplish this? </summary>
     </br></br>
     <blockquote>  Launch a new EC2 instance from an Amazon Machine Image (AMI) in a new Region + Copy an Amazon Machine Image (AMI) of an EC2 instance and specify a different Region for the destination.
    Amazon Machine Image (AMI) Copy. AMI Copy enables you to easily copy your Amazon Machine Images between AWS
@@ -53,6 +53,66 @@ Performance ג€" You can increase performance by distributing your application
 You can also take advantage of region-specific features such as instance types or other AWS services.
 Even Higher Availability ג€" You can design and deploy applications across AWS regions, to increase availability.
 Once the new AMI is in an Available state the copy is complete.
+    </blockquote>
+    </br></br>
+    </details>
+
+___
+
+
+
+   <details>
+    <summary>
+    ❓ A solutions architect needs to ensure that API calls to Amazon DynamoDB from Amazon EC2 instances in a VPC do not traverse the internet.
+What should the solutions architect do to accomplish this?  </summary>
+    </br></br>
+    <blockquote> Create a route table entry for the endpoint + Create a gateway endpoint for DynamoDB.
+  
+    </blockquote>
+    </br></br>
+    </details>
+    
+    
+    ___
+
+
+
+   <details>
+    <summary>
+    ❓ A company's legacy application is currently relying on a single-instance Amazon RDS MySQL database without encryption. Due to new compliance requirements, all existing and new data in this database must be encrypted.
+How should this be accomplished?  </summary>
+    </br></br>
+    <blockquote> Take a Snapshot of the RDS instance. Create an encrypted copy of the snapshot. Restore the RDS instance from the encrypted snapshot.
+  
+    </blockquote>
+    </br></br>
+    </details>
+    
+    
+        ___
+
+
+
+   <details>
+    <summary>
+    ❓ A manufacturing company wants to implement predictive maintenance on its machinery equipment. The company will install thousands of IoT sensors that will send data to AWS in real time. A solutions architect is tasked with implementing a solution that will receive events in an ordered manner for each machinery asset and ensure that data is saved for further processing at a later time.  </summary>
+    </br></br>
+    <blockquote>  Use Amazon Kinesis Data Streams for real-time events with a partition for each equipment asset. Use Amazon Kinesis Data Firehose to save data to Amazon S3.
+  
+    </blockquote>
+    </br></br>
+    </details>
+
+___
+
+
+
+   <details>
+    <summary>
+    ❓ A manufacturing company wants to implement predictive maintenance on its machinery equipment. The company will install thousands of IoT sensors that will send data to AWS in real time. A solutions architect is tasked with implementing a solution that will receive events in an ordered manner for each machinery asset and ensure that data is saved for further processing at a later time.  </summary>
+    </br></br>
+    <blockquote>  Use Amazon Kinesis Data Streams for real-time events with a partition for each equipment asset. Use Amazon Kinesis Data Firehose to save data to Amazon S3.
+  
     </blockquote>
     </br></br>
     </details>
