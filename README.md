@@ -273,7 +273,155 @@ Which solution addresses this performance issue?</summary>
 The company wants a highly available solution. However, the company needs to minimize costs and does not want to manage additional infrastructure. Additionally, the company wants to keep 14 days of data available for immediate analysis and archive any data older than 14 days.
 What is the MOST operationally efficient solution that meets these requirements?</summary>
   </br></br>
-         <blockquote>    Create an Amazon Kinesis Data Firehose delivery stream to ingest the alerts. Configure the Kinesis Data Firehose stream to deliver the alerts to an Amazon S3 bucket. Set up an S3 Lifecycle configuration to transition data to Amazon S3 Glacier after 14 days. Most Voted </blockquote>
+         <blockquote>    Create an Amazon Kinesis Data Firehose delivery stream to ingest the alerts. Configure the Kinesis Data Firehose stream to deliver the alerts to an Amazon S3 bucket. Set up an S3 Lifecycle configuration to transition data to Amazon S3 Glacier after 14 days. </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+   <details>
+    <summary>
+      ❓A company's application integrates with multiple software-as-a-service (SaaS) sources for data collection. The company runs Amazon EC2 instances to receive the data and to upload the data to an Amazon S3 bucket for analysis. The same EC2 instance that receives and uploads the data also sends a notification to the user when an upload is complete. The company has noticed slow application performance and wants to improve the performance as much as possible.
+Which solution will meet these requirements with the LEAST operational overhead?</summary>
+  </br></br>
+         <blockquote>    Create an Amazon AppFlow flow to transfer data between each SaaS source and the S3 bucket. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete. </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+    
+   <details>
+    <summary>
+      ❓ A company runs a highly available image-processing application on Amazon EC2 instances in a single VPC. The EC2 instances run inside several subnets across multiple Availability Zones. The EC2 instances do not communicate with each other. However, the EC2 instances download images from Amazon S3 and upload images to Amazon S3 through a single NAT gateway. The company is concerned about data transfer charges.
+What is the MOST cost-effective way for the company to avoid Regional data transfer charges?</summary>
+  </br></br>
+         <blockquote>    Deploy a gateway VPC endpoint for Amazon S3. </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+
+
+
+  
+    
+   <details>
+    <summary>
+      ❓A company has an on-premises application that generates a large amount of time-sensitive data that is backed up to Amazon S3. The application has grown and there are user complaints about internet bandwidth limitations. A solutions architect needs to design a long-term solution that allows for both timely backups to Amazon S3 and with minimal impact on internet connectivity for internal users.
+Which solution meets these requirements?</summary>
+  </br></br>
+         <blockquote>    Establish a new AWS Direct Connect connection and direct backup traffic through this new connection. </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+   <details>
+    <summary>
+      ❓A company has an Amazon S3 bucket that contains critical data. The company must protect the data from accidental deletion.
+Which combination of steps should a solutions architect take to meet these requirements? </summary>
+  </br></br>
+         <blockquote>    Enable MFA Delete on the S3 bucket + Enable versioning on the S3 bucket.  </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+  
+    
+  
+   <details>
+    <summary>
+      ❓A company has a data ingestion workflow that consists of the following:
+• An Amazon Simple Notification Service (Amazon SNS) topic for notifications about new data deliveries
+• An AWS Lambda function to process the data and record metadata
+The company observes that the ingestion workflow fails occasionally because of network connectivity issues. When such a failure occurs, the Lambda function does not ingest the corresponding data unless the company manually reruns the job.
+Which combination of actions should a solutions architect take to ensure that the Lambda function ingests all data in the future? </summary>
+  </br></br>
+         <blockquote>    Create an Amazon Simple Queue Service (Amazon SQS) queue, and subscribe it to the SNS topic + Modify the Lambda function to read from an Amazon Simple Queue Service (Amazon SQS) queue. </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+
+
+    
+  
+   <details>
+    <summary>
+      ❓A company has an application that provides marketing services to stores. The services are based on previous purchases by store customers. The stores upload transaction data to the company through SFTP, and the data is processed and analyzed to generate new marketing offers. Some of the files can exceed 200 GB in size.
+Recently, the company discovered that some of the stores have uploaded files that contain personally identifiable information (PII) that should not have been included. The company wants administrators to be alerted if PII is shared again. The company also wants to automate remediation.
+What should a solutions architect do to meet these requirements with the LEAST development effort?
+
+</summary>
+  </br></br>
+         <blockquote>   Use an Amazon S3 bucket as a secure transfer point. Use Amazon Macie to scan the objects in the bucket. If objects contain PII, use Amazon Simple Notification Service (Amazon SNS) to trigger a notification to the administrators to remove the objects that contain PII.  </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+
+
+  
+  
+   <details>
+    <summary>
+      ❓A company needs guaranteed Amazon EC2 capacity in three specific Availability Zones in a specific AWS Region for an upcoming event that will last 1 week.
+What should the company do to guarantee the EC2 capacity?
+
+</summary>
+  </br></br>
+         <blockquote>   Create an On-Demand Capacity Reservation that specifies the Region and three Availability Zones needed.  </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+
+
+
+   <details>
+    <summary>
+      ❓A company's website uses an Amazon EC2 instance store for its catalog of items. The company wants to make sure that the catalog is highly available and that the catalog is stored in a durable location.
+What should a solutions architect do to meet these requirements?
+
+</summary>
+  </br></br>
+         <blockquote>   Move the catalog to an Amazon Elastic File System (Amazon EFS) file system.  </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+  
+  
+   <details>
+    <summary>
+      ❓A company stores call transcript files on a monthly basis. Users access the files randomly within 1 year of the call, but users access the files infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve files that are less than 1-year-old as quickly as possible. A delay in retrieving older files is acceptable.
+Which solution will meet these requirements MOST cost-effectively?
+</summary>
+  </br></br>
+         <blockquote>   Store individual files in Amazon S3 Intelligent-Tiering. Use S3 Lifecycle policies to move the files to S3 Glacier Flexible Retrieval after 1 year. Query and retrieve the files that are in Amazon S3 by using Amazon Athena. Query and retrieve the files that are in S3 Glacier by using S3 Glacier Select.   </blockquote>
+  </br></br>
+  </details>
+  
+  ___
+  
+  
+  
+  
+   <details>
+    <summary>
+      ❓A company has a production workload that runs on 1,000 Amazon EC2 Linux instances. The workload is powered by third-party software. The company needs to patch the third-party software on all EC2 instances as quickly as possible to remediate a critical security vulnerability.
+What should a solutions architect do to meet these requirements?
+</summary>
+  </br></br>
+         <blockquote>   Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.   </blockquote>
   </br></br>
   </details>
   
